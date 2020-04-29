@@ -4,7 +4,7 @@ services:
     image: mysql:5.7
     container_name: mysqldb
     ports:
-      - "3306:3306"
+      - "3309:3306"
     environment:
      MYSQL_ROOT_PASSWORD: admin
      MYSQL_DATABASE: catalog
@@ -152,7 +152,7 @@ services:
     container_name: shoppingcart-ui
     build: ./shoppingcart-ui
     ports:
-      - "8080:8080"
+      - "8087:8080"
       - "49797:8787"
     depends_on:
       - config-server
